@@ -2,6 +2,9 @@ const usersResolvers = require("./users");
 
 module.exports = {
   Query: {
-    ...usersResolvers.Query,
+    sayHi: () => "Hello World!",
+  },
+  Mutation: {
+    ...usersResolvers.Mutation,
   },
 };
