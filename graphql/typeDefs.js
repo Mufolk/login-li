@@ -13,6 +13,13 @@ module.exports = gql`
     createdAt: String!
   }
 
+  type Entity {
+    id: ID!
+    someFeat: String!
+    anotherFeat: String!
+    createdAt: String!
+  }
+
   input RegisterInput {
     username: String!
     password: String!
@@ -22,5 +29,12 @@ module.exports = gql`
 
   type Mutation {
     register(registerInput: RegisterInput): User!
+    login(username: String!, password: String!): User!
+    createEntity(someFeat: String!): Entity!
+    deleteEntity(entityId: ID!): Entity!
+  }
+
+  type Subscription {
+    newEntity: Entity!
   }
 `;

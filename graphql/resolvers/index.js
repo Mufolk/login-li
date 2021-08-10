@@ -1,4 +1,5 @@
 const usersResolvers = require("./users");
+const entityResolvers = require("./entity");
 
 module.exports = {
   Query: {
@@ -6,5 +7,9 @@ module.exports = {
   },
   Mutation: {
     ...usersResolvers.Mutation,
+    ...entityResolvers.Mutation,
+  },
+  Subscription: {
+    ...entityResolvers.Subscription,
   },
 };
