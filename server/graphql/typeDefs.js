@@ -1,16 +1,17 @@
 const { gql } = require("apollo-server");
 
 module.exports = gql`
-  type Query {
-    sayHi: String!
-  }
-
   type User {
     id: ID!
     email: String!
     token: String!
     username: String!
     createdAt: String!
+  }
+
+  type Query {
+    sayHi: String!
+    getUsers: [User]
   }
 
   type Entity {

@@ -3,7 +3,7 @@ const entityResolvers = require("./entity");
 
 module.exports = {
   Query: {
-    sayHi: () => "Hello World!",
+    ...usersResolvers.Query,
   },
   Mutation: {
     ...usersResolvers.Mutation,
