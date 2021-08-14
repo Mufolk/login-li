@@ -10,8 +10,9 @@ function MenuBar() {
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
   return (
-    <Menu secondary size="massive" color="teal">
+    <Menu secondary stackable size="massive" color="teal">
       <Menu.Item
+        className="menu-alignment"
         name="home"
         active={activeItem === "home"}
         onClick={handleItemClick}
@@ -38,12 +39,6 @@ function MenuBar() {
           as={Link}
           to="/register"
         />
-        {/* <Menu.Item
-          name="logout"
-          active={activeItem === "logout"}
-          onClick={handleItemClick}
-          icon="logout"
-        ></Menu.Item> */}
       </Menu.Menu>
     </Menu>
   );
