@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Icon } from "semantic-ui-react";
+import moment from "moment";
 
 function UserCard({ user: { username, email, createdAt } }) {
   return (
@@ -7,8 +8,10 @@ function UserCard({ user: { username, email, createdAt } }) {
       <Card.Content header={username} />
       <Card.Content description={email} />
       <Card.Content extra>
-        <Icon name="stopwatch" />
-        {createdAt}
+        <p>
+          <Icon name="stopwatch" /> Registered {moment(createdAt).fromNow(true)}{" "}
+          Ago
+        </p>
       </Card.Content>
     </Card>
   );
