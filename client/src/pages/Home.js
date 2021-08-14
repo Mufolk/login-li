@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
+import { Grid, Header } from "semantic-ui-react";
 
 function Home() {
   const {
@@ -12,9 +13,16 @@ function Home() {
   } else {
     console.log(users);
     return (
-      <div>
-        <h1>Home Page</h1>
-      </div>
+      <Grid columns={1} divided>
+        <Grid.Row>
+          <Header fluid as="h1">
+            Newest Users
+          </Header>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column>hey yo</Grid.Column>
+        </Grid.Row>
+      </Grid>
     );
   }
 }
