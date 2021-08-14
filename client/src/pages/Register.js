@@ -40,14 +40,18 @@ function Register(props) {
     <div>
       <Grid>
         <Grid.Row centered>
-          <Grid.Column width={6}>
+          <Grid.Column>
             <Form
+              inverted
               onSubmit={onSubmit}
               noValidate
-              className={loading ? "loading" : ""}
+              className={loading ? "loading" : "register-form"}
             >
-              <Header as="h1">Register</Header>
+              <Header as="h1" inverted>
+                Register
+              </Header>
               <Form.Input
+                inverted
                 label="Username"
                 placeholder="Username..."
                 name="username"

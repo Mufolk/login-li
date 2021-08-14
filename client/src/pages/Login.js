@@ -36,16 +36,20 @@ function Login(props) {
 
   return (
     <div>
-      <Grid>
+      <Grid className>
         <Grid.Row centered>
-          <Grid.Column width={6}>
+          <Grid.Column>
             <Form
+              inverted
               onSubmit={onSubmit}
               noValidate
-              className={loading ? "loading" : ""}
+              className={loading ? "loading" : "login-form"}
             >
-              <Header as="h1">Login</Header>
+              <Header as="h1" inverted>
+                Login
+              </Header>
               <Form.Input
+                inverted
                 label="Username"
                 placeholder="Username..."
                 name="username"
@@ -55,6 +59,7 @@ function Login(props) {
                 onChange={onChange}
               />
               <Form.Input
+                inverted
                 label="Password"
                 placeholder="Password..."
                 name="password"
