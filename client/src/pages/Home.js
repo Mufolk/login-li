@@ -3,34 +3,37 @@ import { useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
 import { Grid, Header } from "semantic-ui-react";
 
+import UserCard from "../components/UserCard";
+
 function Home() {
-  const {
-    loading,
-    data: { getUsers: users },
-  } = useQuery(FETCH_USERS_QUERY);
-  if (users === undefined) {
-    return <h1>Loading</h1>;
-  } else {
-    console.log(users);
-    return (
-      <Grid columns={1} divided>
-        <Grid.Row>
-          <Header fluid as="h1">
-            Newest Users
-          </Header>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column>hey yo</Grid.Column>
-        </Grid.Row>
-      </Grid>
-    );
-  }
+  const { loading, data } = useQuery(FETCH_USERS_QUERY);
+
+  return (
+    <Grid columns={1}>
+      <Grid.Row>
+        <Header as="h1" style={{ marginLeft: 15 }}>
+          Newest Users
+        </Header>
+      </Grid.Row>
+      <Grid.Row>
+        {loading ? (
+          <Header as="h3">Loading newest users</Header>
+        ) : (
+          data.getUsers &&
+          data.getUsers.map((user) => (
+            <Grid.Column style={{ marginBottom: 20 }}>
+              <UserCard user={user} />
+            </Grid.Column>
+          ))
+        )}
+      </Grid.Row>
+    </Grid>
+  );
 }
 
 const FETCH_USERS_QUERY = gql`
   {
     getUsers {
-      id
       username
       email
       createdAt
