@@ -9,13 +9,13 @@ function Home() {
   const { loading, data } = useQuery(FETCH_USERS_QUERY);
 
   return (
-    <Grid columns={1}>
+    <Grid stackable>
       <Grid.Row>
-        <Header as="h1" style={{ marginLeft: 15 }}>
+        <Header as="h1" style={{ marginLeft: 10 }}>
           Newest Users
         </Header>
       </Grid.Row>
-      <Grid.Row>
+      <Grid.Row columns={3}>
         {loading ? (
           <Header as="h3">Loading newest users</Header>
         ) : (

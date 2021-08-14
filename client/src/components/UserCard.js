@@ -4,7 +4,7 @@ import moment from "moment";
 
 function UserCard({ user: { username, email, createdAt } }) {
   return (
-    <Card fluid>
+    <Card>
       <Card.Content header={username} />
       <Card.Content description={email} />
       <Card.Content extra>

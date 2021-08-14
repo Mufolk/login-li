@@ -5,4 +5,8 @@
   .ui.secondary.menu > .menu > .item {
     justify-content: center;
   }
+
+  .ui.card {
+    width: 100%;
+  }
 }
