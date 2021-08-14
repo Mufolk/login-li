@@ -21,7 +21,7 @@ function Home() {
         ) : (
           data.getUsers &&
           data.getUsers.map((user) => (
-            <Grid.Column style={{ marginBottom: 20 }}>
+            <Grid.Column key={user.id} style={{ marginBottom: 20 }}>
               <UserCard user={user} />
             </Grid.Column>
           ))
