@@ -57,7 +57,7 @@ export default function Presentation() {
         <Grid.Column>
           <Grid.Row style={{ marginBottom: 28 }}>
             <Container text style={{ fontSize: 20 }}>
-              <Header inverted style={{ marginBottom: 10 }} as="h3">
+              <Header inverted style={{ marginBottom: 10 }} as="h2">
                 Tenha uma vida mais saudável
               </Header>
               É por meio dos alimentos que o corpo recebe todos os nutrientes
@@ -69,7 +69,7 @@ export default function Presentation() {
           </Grid.Row>
           <Grid.Row style={{ marginBottom: 28 }}>
             <Container text style={{ fontSize: 20 }}>
-              <Header inverted style={{ marginBottom: 10 }} as="h3">
+              <Header inverted style={{ marginBottom: 10 }} as="h2">
                 Brasileiros e a nutrição
               </Header>
               Entretanto, a alimentação da grande maioria dos brasileiros é
@@ -80,12 +80,7 @@ export default function Presentation() {
               percentual sobe para 47,2%.
             </Container>
           </Grid.Row>
-          <Grid.Row
-            style={{
-              paddingBottom: 0,
-              marginBottom: 40,
-            }}
-          >
+          <Grid.Row>
             <Container text>
               <Button huge primary as={Link} to="/register">
                 Venha ser mais saudável

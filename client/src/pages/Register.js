@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
-import { Button, Form, Header, Grid } from "semantic-ui-react";
+import { Button, Form, Header, Grid, Icon } from "semantic-ui-react";
 import { useMutation } from "@apollo/react-hooks";
 import gql from "graphql-tag";
+import { Link } from "react-router-dom";
 
 import { AuthContext } from "../context/auth";
 import { useForm } from "../utils/hooks";
@@ -47,8 +48,16 @@ function Register(props) {
               noValidate
               className={loading ? "loading" : "register-form"}
             >
-              <Header as="h1" inverted>
-                Register
+              <Header as="h1" inverted style={{ marginBottom: 30 }}>
+                <Grid columns={3}>
+                  <Grid.Column as={Link} to="/">
+                    <Icon
+                      name="arrow alternate circle left"
+                      style={{ fontSize: 40 }}
+                    ></Icon>
+                  </Grid.Column>
+                  <Grid.Column style={{ fontSize: 40 }}>Register</Grid.Column>
+                </Grid>
               </Header>
               <Form.Input
                 inverted
