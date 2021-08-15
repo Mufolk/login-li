@@ -7,7 +7,6 @@ import {
   Button,
   Header,
   Grid,
-  Image,
 } from "semantic-ui-react";
 
 import { Link } from "react-router-dom";
@@ -45,7 +44,11 @@ export default function Presentation() {
 
       <Grid columns={2} stackable>
         <Grid.Column style={{ paddingBottom: 0 }}>
-          <img src={image} class="ui image huge image-size" />
+          <img
+            src={image}
+            class="ui image huge image-size"
+            alt="family eating some vegetables"
+          />
         </Grid.Column>
         <Grid.Column>
           <Grid.Row style={{ marginBottom: 28 }}>
