@@ -10,7 +10,7 @@ import {
 } from "semantic-ui-react";
 
 import { Link } from "react-router-dom";
-import image from "./presentation-image.png";
+import image from "./presentation-image-min.png";
 
 export default function Presentation() {
   return (
