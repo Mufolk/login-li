@@ -25,6 +25,12 @@
     margin: auto;
     margin-top: 10%;
   }
+
+  .ui.message {
+    width: 35%;
+    margin: auto;
+    margin-top: 1em;
+  }
   .ui.container {
     width: 100%;
   }

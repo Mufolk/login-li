@@ -3,7 +3,7 @@ import { Route, Redirect } from "react-router";
 
 import { AuthContext } from "../context/auth";
 
-function AuthRoute({ component: Component }, ...rest) {
+function AuthRoute({ component: Component, ...rest }) {
   const { user } = useContext(AuthContext);
 
   return (

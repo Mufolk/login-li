@@ -23,7 +23,6 @@ function Login(props) {
       props.history.push("/");
     },
     onError(err) {
-      //Errors from the graphql server
       setErrors(err.graphQLErrors[0].extensions.errors);
     },
     //Variables may be equal to values because is formatted on graphql data like
