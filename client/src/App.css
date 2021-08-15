@@ -123,14 +123,19 @@ body,
 .ui.inverted.form .ui.checkbox .box,
 .ui.inverted.form .ui.checkbox label,
 .ui.inverted.form label,
-a,
 .ui.secondary.inverted.menu .link.item,
-.ui.secondary.inverted.menu a.item {
-  color: #2a2a2a !important;
+.ui.secondary.inverted.menu a.item,
+a {
+  color: #2a2a2a;
 }
 
 a:hover,
 .ui.secondary.inverted.menu .link.item,
 .ui.secondary.inverted.menu a.item {
   color: #a1a1a1;
+}
+
+.ui.secondary.inverted.menu .link.item,
+.ui.secondary.inverted.menu a.item {
+  color: #a1a1a1 !important;
 }
