@@ -6,10 +6,16 @@ _Qualquer dúvida, favor entrar em contato_
 
 **Instruções gerais para a execução do projeto**
 
-- Para executar:
+- Para instalar a primeira dependência:
 
 ```sh
   npm install
+
+```
+
+- Para executar a aplicação:
+
+```sh
   npm run dev
 ```
 
