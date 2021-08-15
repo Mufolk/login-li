@@ -12,7 +12,7 @@ function Home() {
   const { user } = useContext(AuthContext);
 
   const homePage = user ? (
-    <Grid stackable>
+    <Grid stackable className="dashboard">
       <Grid.Row>
         <Header inverted as="h1" style={{ marginLeft: 10 }}>
           Hello, welcome {user.username}
@@ -32,33 +32,6 @@ function Home() {
       </Grid.Row>
     </Grid>
   ) : (
-    //   <Menu secondary stackable size="massive" color="teal">
-    //     <Menu.Menu position="center">
-    //       <Menu.Item
-    //         name="login"
-    //         active={activeItem === "login"}
-    //         onClick={handleItemClick}
-    //         as={Link}
-    //         to="/login"
-    //       >
-    //         Login
-    //         <Icon name="sign-in" style={{ marginLeft: 5 }} />
-    //       </Menu.Item>
-    //       <Menu.Item
-    //         name="register"
-    //         active={activeItem === "register"}
-    //         onClick={handleItemClick}
-    //         as={Link}
-    //         to="/register"
-    //       >
-    //         Register
-    //         <Icon name="signup" style={{ marginLeft: 5 }} />
-    //       </Menu.Item>
-    //     </Menu.Menu>
-    //   </Menu>
-    //   <Button type="submit" primary>
-    //   Login
-    // </Button>
     <Presentation />
   );
 

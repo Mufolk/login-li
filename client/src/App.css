@@ -19,24 +19,28 @@
   }
 }
 
-/* 
-style={{ marginTop: "20%" }} 
-*/
-/* 
-style={{ marginTop: "50%" }} */
-
 @media only screen and (min-width: 768px) {
   .ui.form {
-    width: 40%;
+    width: 35%;
     margin: auto;
-    margin-top: 15%;
+    margin-top: 10%;
+  }
+  .ui.container {
+    width: 100%;
   }
 
-  .ui.segment > .image-size {
-    width: 62vh;
+  .ui.grid.dashboard {
+    margin-left: 10%;
   }
 }
 
-body {
-  background-color: #1b1c1d;
+body,
+.ui.primary.ui.inverted.segment,
+.ui.inverted.segment {
+  background-color: #363636;
+}
+
+.ui.secondary.inverted.pointing.menu,
+.ui.secondary.pointing.menu {
+  border: none;
 }
