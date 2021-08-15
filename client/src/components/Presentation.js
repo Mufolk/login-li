@@ -7,6 +7,7 @@ import {
   Button,
   Header,
   Grid,
+  Image,
 } from "semantic-ui-react";
 
 import { Link } from "react-router-dom";
@@ -51,11 +52,7 @@ export default function Presentation() {
 
       <Grid columns={2} stackable>
         <Grid.Column style={{ paddingBottom: 0 }}>
-          <img
-            src={image}
-            class="ui image huge image-size"
-            alt="family eating some vegetables"
-          />
+          <Image huge alt="family eating some vegetables" src={image}></Image>
         </Grid.Column>
         <Grid.Column>
           <Grid.Row style={{ marginBottom: 28 }}>
@@ -68,19 +65,6 @@ export default function Presentation() {
               e células. Portanto, para ter uma vida saudável é importante
               prezar por uma nutrição adequada, ingerindo comidas e bebidas
               saudáveis e na quantidade indicada.
-            </Container>
-          </Grid.Row>
-          <Grid.Row style={{ marginBottom: 28 }}>
-            <Container text style={{ fontSize: 20 }}>
-              <Header inverted style={{ marginBottom: 10 }} as="h3">
-                Brasileiros e a nutrição
-              </Header>
-              Entretanto, a alimentação da grande maioria dos brasileiros é
-              pouco saudável. Segundo pesquisa do Ministério da Saúde, apenas
-              23,7% da população consome a quantidade de frutas e hortaliças
-              recomendada pela Organização Mundial da Saúde (OMS). Além disso,
-              37,2% comem alimentos muito gordurosos. Entre os homens, esse
-              percentual sobe para 47,2%.
             </Container>
           </Grid.Row>
           <Grid.Row style={{ marginBottom: 28 }}>
