@@ -14,7 +14,14 @@ import image from "./presentation-image.png";
 
 export default function Presentation() {
   return (
-    <Segment inverted vertical center aligned style={{ paddingBottom: 0 }}>
+    <Segment
+      inverted
+      vertical
+      center
+      aligned
+      style={{ paddingBottom: 0 }}
+      className="landingPage"
+    >
       <Menu large secondary inverted pointing>
         <Menu.Item>
           <Icon name="sidebar"></Icon>
