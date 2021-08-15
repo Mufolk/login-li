@@ -9,6 +9,7 @@ _Qualquer dúvida, favor entrar em contato_
 - Para executar:
 
 ```sh
+  npm install
   npm run dev
 ```
 
