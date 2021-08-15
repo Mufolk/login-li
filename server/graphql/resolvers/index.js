@@ -9,7 +9,4 @@ module.exports = {
     ...usersResolvers.Mutation,
     ...entityResolvers.Mutation,
   },
-  Subscription: {
-    ...entityResolvers.Subscription,
-  },
 };

@@ -34,8 +34,4 @@ module.exports = gql`
     createEntity(someFeat: String!): Entity!
     deleteEntity(entityId: ID!): Entity!
   }
-
-  type Subscription {
-    newEntity: Entity!
-  }
 `;

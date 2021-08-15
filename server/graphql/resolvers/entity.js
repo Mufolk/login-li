@@ -6,8 +6,6 @@ const checkAuth = require("../../util/check.auth");
 module.exports = {
   Mutation: {
     async createEntity(_, { someFeat }, context) {
-      const user = checkAuth(context);
-
       if (someFeat.trim() === "") {
         throw new Error("SomeFeat must not be empty");
       }
@@ -18,10 +16,6 @@ module.exports = {
       });
 
       const entity = await newEntity.save();
-
-      context.pubsub.publish("NEW_ENTITY", {
-        newEntity: entity,
-      });
 
       return entity;
     },
@@ -39,11 +33,6 @@ module.exports = {
       } catch (err) {
         throw new Error(err);
       }
-    },
-  },
-  Subscription: {
-    newEntity: {
-      subscribe: (_, __, { pubsub }) => pubsub.asyncIterator("NEW_ENTITY"),
     },
   },
 };
