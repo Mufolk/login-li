@@ -11,7 +11,7 @@ import {
 } from "semantic-ui-react";
 
 import { Link } from "react-router-dom";
-import image from "./presentation-image-min.png";
+import image from "../details/images/presentation-image-min.png";
 
 export default function Presentation() {
   return (
